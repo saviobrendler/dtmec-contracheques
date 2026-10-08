@@ -1,0 +1,45 @@
+PORTAL DE CONTRACHEQUES DT MEC
+(hospedagem gratuita na Netlify, sem servidor próprio)
+
+COMO PUBLICAR (só pelo navegador, sem programa nenhum)
+
+1) GitHub (guarda os arquivos)
+   - Crie uma conta grátis em github.com.
+   - Clique em "New repository" (botão + no canto superior direito).
+   - Nome: dtmec-contracheques. Marque "Private". Clique em "Create repository".
+   - Descompacte este zip no computador.
+   - Na página do repositório, clique em "uploading an existing file" (ou "Add file" > "Upload files").
+   - Arraste TODO o conteúdo da pasta descompactada (as pastas "netlify" e "public" e os arquivos
+     netlify.toml e package.json) para a área de upload. Espere terminar e clique em "Commit changes".
+
+2) Netlify (coloca no ar)
+   - Crie uma conta grátis em netlify.com (pode entrar com a conta do GitHub).
+   - Clique em "Add new project" > "Import an existing project" > "GitHub".
+   - Autorize e escolha o repositório dtmec-contracheques.
+   - Não mude nada nas configurações. Clique em "Deploy".
+   - Em 1 ou 2 minutos aparece o endereço do site, algo como nome-qualquer.netlify.app.
+   - (Opcional) Em "Project configuration" > "Change project name" você escolhe um nome melhor,
+     ex.: dtmec-contracheques.netlify.app. Também dá para usar um subdomínio seu, tipo
+     portal.dtmecservicos.com.br, em "Domain management" (precisa de um CNAME no DNS do domínio).
+
+3) Primeiro acesso (faça logo após publicar)
+   - Abra https://SEU-ENDERECO/rh
+   - Crie o usuário e a senha do RH. Guarde bem.
+
+ENDEREÇOS
+   - Colaborador:  https://SEU-ENDERECO/
+   - RH:           https://SEU-ENDERECO/rh
+
+COMO USAR
+   - RH cadastra o funcionário (nome, CPF, matrícula, cargo).
+   - O colaborador entra com o CPF e, na primeira vez, a senha é o próprio CPF (só números).
+     Isso não está escrito na tela: avise o colaborador.
+   - RH envia o PDF escolhendo funcionário, mês e tipo. Para vários de uma vez, use o envio em lote
+     com o CPF no nome de cada arquivo (ex.: 12345678900.pdf).
+   - Limite por PDF: 4 MB.
+
+ATUALIZAR O PORTAL NO FUTURO
+   - Suba os arquivos novos no mesmo repositório do GitHub. A Netlify republica sozinha.
+
+ONDE FICAM OS DADOS
+   - No Netlify Blobs do seu projeto (cadastro e PDFs). Não apague o projeto na Netlify.
